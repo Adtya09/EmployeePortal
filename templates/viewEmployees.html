@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowEployees</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav style="float:right; margin:10px;">
+    <a href="http://localhost:5000/">Insert Employee</a>
+    <form name="searchbarform" action="/getEmployee" method="post">
+        <input type="search" name="searchbar" placeholder="Enter Employee Full Name ">
+        <input type="submit" value="Search">
+    </form>
+</nav>
+
+
+<h1>All Employee Records </h1>
+<table class="table table-dark">
+    <thead>
+    <tr>
+
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">D.O.J</th>
+        <th scope="col">Already Employed</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        {% for key, value in row.items() %}
+
+        <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+
+    </tbody>
+</table>
+
+</body>
+</html>

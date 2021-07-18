@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>InsertEmployee</title>
+</head>
+<body>
+<nav style="float:right; margin:10px;">
+    <a href="http://localhost:5000/viewEmployees">View Employee</a>
+</nav>
+
+<div class="container">
+    <h2>Insert Employee</h2>
+    <form action="/insertEmployee" method="post">
+        <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input required type="text" class="form-control" id="fname" placeholder="Enter first name"
+                   name="First Name">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input required type="text" class="form-control" id="lname" placeholder="Enter Last name" name="Last Name">
+        </div>
+        <div class="form-group">
+            <label>Gender</label><br>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input required type="radio" class="form-check-input" name="optradio" value="Male"> Male
+                </label>
+                <label class="form-check-label">
+                    <input required type="radio" class="form-check-input" name="optradio" value="Female"> Female
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Date of Joining: <input required type="date" name="date"></label>
+
+        </div>
+        <div class="form-group">
+            <label>Already Employed:</label>
+            <select class="form-select" aria-label="Default select example" name="selected">
+                <option value="YES" selected>YES</option>
+                <option value="NO">NO</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
